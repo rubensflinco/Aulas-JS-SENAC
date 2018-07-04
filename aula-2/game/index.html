@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Game aula 2</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Game aula 2</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra game_option animated s1 pulse">
+
+                <div>
+                    <i class="fa fa-user"></i> -
+                    <i class="fa fa-android"></i>
+                </div>
+                <div>
+                    <span id="pp">0</span> -
+                    <span id="pm">0</span>
+                </div>
+
+            </div>
+ 
+            <div class="fundo_sombra animated s2 pulse">
+
+                <center>
+                    <button id="o_pedra" class="btn btn-game animated s2 pulse"><i class='fa fa-stop'></i> Pedra</button>
+                    <button id="o_papel" class="btn btn-game animated s3 pulse"><i class='fa fa-paper-plane'></i> Papel</button>
+                    <button id="o_tesoura" class="btn btn-game animated s4 pulse"><i class='fa fa-scissors'></i> Tesoura</button>
+                </center>
+
+                <br>
+                <br>
+
+                <div id="resultado"></div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+
+</html>

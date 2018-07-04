@@ -1,0 +1,56 @@
+.fundo_sombra{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+    background-color: #ffffff;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+.fundo_sombra>titulo{
+    font-size: 35px;
+    font-family: sans-serif;
+}
+.game_option{
+    text-align: center;
+    font-size: 45px;
+}
+.btn:focus{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+.btn:active:focus{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+.btn-game{
+    margin: 25px;
+    padding: 30px;
+    font-size: 40px;
+    border-radius: 20%;
+    color: #268df3;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.btn-game:active{
+    color: #268df3;
+    border-bottom-color: #268df3;
+}
+.btn-game:focus{
+    color: #268df3;
+    border-bottom-color: #268df3;
+}
+#resultado{
+    text-align: center;
+    font-size: 45px;
+}
+.animated.s1{
+    animation-delay: 0.25s!important;
+}
+.animated.s2{
+    animation-delay: 0.50s!important;
+}
+.animated.s3{
+    animation-delay: 0.75s!important;
+}
+.animated.s4{
+    animation-delay: 1.00s!important;
+}
+.animated.s5{
+    animation-delay: 1.25s!important;
+}
