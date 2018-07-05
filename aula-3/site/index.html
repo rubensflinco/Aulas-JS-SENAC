@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 3</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Aula 3</titulo>
+        </header>
+
+        <div class="container">
+            <form method="POST" action="javascript:submitFormPedido();" class="fundo_sombra animated s1 pulse">
+
+                <h1 align="center">Fazer pedido</h1>
+
+                <br>
+                <br>
+                <label>Numero do pedido</label>
+                <input readonly id="numero" type="text" class="form" placeholder="Numero do pedido">
+                <br>
+                <br>
+                <label>Nome do cliente</label>
+                <input id="nome" type="text" class="form" placeholder="Nome do cliente">
+                <br>
+                <br>
+                <label>Quantidade de ovos</label>
+                <input id="quantidade" type="number" placeholder="Quantidade de ovos" value="1" min="1" max="5">
+
+                <span id="forQuantidade"></span>
+
+
+                <br>
+                <br>
+                <center>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                </center>
+
+            </form>
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                    <br>Apoiador(Fico olhando):
+                    <br>Lucas Henrique
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <script type="text/javascript" src="src/js/changeForm.js"></script>
+    <script type="text/javascript" src="src/js/submitForm.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#quantidade").change(function () {
+                forQuantidade($("#quantidade").val());
+            });
+            forQuantidade($("#quantidade").val());
+        });
+    </script>
+
+</html>

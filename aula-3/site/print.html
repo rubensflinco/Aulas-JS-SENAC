@@ -1,0 +1,46 @@
+<!-- Teamplate -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 3</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+
+    <body>
+
+        <div class="container">
+            <form method="POST" action="javascript:submitFormPedido();" class="fundo_sombra animated s1 pulse">
+
+                <center><a href="javascript:window.print();" class="btn btn-primary"><h1>Imprimir pedido</h1></a></center>
+
+                <br>
+                <br>
+                <label>Numero do pedido</label>
+                <input readonly value="'+numero+'">
+                <br>
+                <br>
+                <label>Nome do cliente</label>
+                <input readonly value="'+nome+'">
+                <br>
+                <br>
+                <label>Quantidade de ovos</label>
+                <input readonly value="'+quantidade+'">
+                <span id="forQuantidadePrint"></span>
+
+            </form>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+
+</html>
