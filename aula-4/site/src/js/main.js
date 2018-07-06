@@ -51,8 +51,8 @@ function sacarDinDin(valorSaque) {
 
         if (nota100 > 0) {
             while (valorSaqueFor >= 100) {
+                valorSaqueFor -= 100;
                 if (nota100 > 0) {
-                    valorSaqueFor -= 100;
                     nota100--;
                     quatNotas100++;
                     quatNotasTotal++;
@@ -62,8 +62,8 @@ function sacarDinDin(valorSaque) {
 
         if (nota50 > 0) {
             while (valorSaqueFor >= 50) {
+                valorSaqueFor -= 50;
                 if (nota50 > 0) {
-                    valorSaqueFor -= 50;
                     nota50--;
                     quatNotas50++;
                     quatNotasTotal++;
@@ -73,8 +73,8 @@ function sacarDinDin(valorSaque) {
 
         if (nota20 > 0) {
             while (valorSaqueFor >= 20) {
+                valorSaqueFor -= 20;
                 if (nota20 > 0) {
-                    valorSaqueFor -= 20;
                     nota20--;
                     quatNotas20++;
                     quatNotasTotal++;
@@ -84,8 +84,8 @@ function sacarDinDin(valorSaque) {
 
         if (nota10 > 0) {
             while (valorSaqueFor >= 10) {
+                valorSaqueFor -= 10;
                 if (nota10 > 0) {
-                    valorSaqueFor -= 10;
                     nota10--;
                     quatNotas10++;
                     quatNotasTotal++;
@@ -95,8 +95,8 @@ function sacarDinDin(valorSaque) {
 
         if (nota5 > 0) {
             while (valorSaqueFor >= 5) {
+                valorSaqueFor -= 5;
                 if (nota5 > 0) {
-                    valorSaqueFor -= 5;
                     nota5--;
                     quatNotas5++;
                     quatNotasTotal++;
@@ -106,8 +106,8 @@ function sacarDinDin(valorSaque) {
 
         if (nota2 > 0) {
             while (valorSaqueFor >= 2) {
+                valorSaqueFor -= 2;
                 if (nota2 > 0) {
-                    valorSaqueFor -= 2;
                     nota2--;
                     quatNotas2++;
                     quatNotasTotal++;
