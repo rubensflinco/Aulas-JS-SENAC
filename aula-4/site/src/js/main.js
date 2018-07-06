@@ -44,74 +44,64 @@ function sacarDinDin(valorSaque) {
         return ("ERRO: o caixa não tem esse valor para saque.");
     }
 
+    // verificar se o valor é menor que R$2.00
     var valorSaqueFor = valorSaque;
     if (valorSaque < 2) {
         return ("ERRO: o caixa não pode sacar um valor menor que R$ 2.00 .");
     } else {
 
-        if (nota100 > 0) {
-            while (valorSaqueFor >= 100) {
-                valorSaqueFor -= 100;
-                if (nota100 > 0) {
-                    nota100--;
-                    quatNotas100++;
-                    quatNotasTotal++;
-                }
+        // whiles para contar notas e entregar a quantidade de notas certas
+        while (valorSaqueFor >= 100) {
+            valorSaqueFor -= 100;
+            if (nota100 > 0) {
+                nota100--;
+                quatNotas100++;
+                quatNotasTotal++;
             }
         }
 
-        if (nota50 > 0) {
-            while (valorSaqueFor >= 50) {
-                valorSaqueFor -= 50;
-                if (nota50 > 0) {
-                    nota50--;
-                    quatNotas50++;
-                    quatNotasTotal++;
-                }
+        while (valorSaqueFor >= 50) {
+            valorSaqueFor -= 50;
+            if (nota50 > 0) {
+                nota50--;
+                quatNotas50++;
+                quatNotasTotal++;
             }
         }
 
-        if (nota20 > 0) {
-            while (valorSaqueFor >= 20) {
-                valorSaqueFor -= 20;
-                if (nota20 > 0) {
-                    nota20--;
-                    quatNotas20++;
-                    quatNotasTotal++;
-                }
+        while (valorSaqueFor >= 20) {
+            valorSaqueFor -= 20;
+            if (nota20 > 0) {
+                nota20--;
+                quatNotas20++;
+                quatNotasTotal++;
             }
         }
 
-        if (nota10 > 0) {
-            while (valorSaqueFor >= 10) {
-                valorSaqueFor -= 10;
-                if (nota10 > 0) {
-                    nota10--;
-                    quatNotas10++;
-                    quatNotasTotal++;
-                }
+        while (valorSaqueFor >= 10) {
+            valorSaqueFor -= 10;
+            if (nota10 > 0) {
+                nota10--;
+                quatNotas10++;
+                quatNotasTotal++;
             }
         }
 
-        if (nota5 > 0) {
-            while (valorSaqueFor >= 5) {
-                valorSaqueFor -= 5;
-                if (nota5 > 0) {
-                    nota5--;
-                    quatNotas5++;
-                    quatNotasTotal++;
-                }
+        while (valorSaqueFor >= 5) {
+            valorSaqueFor -= 5;
+            if (nota5 > 0) {
+                nota5--;
+                quatNotas5++;
+                quatNotasTotal++;
             }
         }
 
-        if (nota2 > 0) {
-            while (valorSaqueFor >= 2) {
-                valorSaqueFor -= 2;
-                if (nota2 > 0) {
-                    nota2--;
-                    quatNotas2++;
-                    quatNotasTotal++;
-                }
+        while (valorSaqueFor >= 2) {
+            valorSaqueFor -= 2;
+            if (nota2 > 0) {
+                nota2--;
+                quatNotas2++;
+                quatNotasTotal++;
             }
         }
 
@@ -121,14 +111,14 @@ function sacarDinDin(valorSaque) {
 
     }
 
-
-
-    var valorSaqueForMin = valorSaqueFor.toFixed(2);
-    var valorSaqueMin = valorSaque.toFixed(2);
-    var saldoCaixaMin = (saldoCaixa - valorSaque).toFixed(2);
-
+    // diminiu saldo do caixa pela quantidade de valor sacado
     saldoCaixa = saldoCaixa - valorSaque;
 
+    // colocar valores de saque e caixa com centavos
+    var valorSaqueMin = valorSaque.toFixed(2);
+    var saldoCaixaMin = saldoCaixa.toFixed(2);
+
+    // gerar JSON com as informações
     var retorno = {
         "valorSaque": valorSaqueMin,
         "valorCaixa": saldoCaixaMin,
@@ -141,7 +131,7 @@ function sacarDinDin(valorSaque) {
             "nota50": quatNotas50,
             "nota100": quatNotas100
         },
-        "quantidadeNotas": {
+        "quantidadeNotasResta": {
             "total": notaTotal,
             "nota2": nota2,
             "nota5": nota5,
@@ -152,6 +142,7 @@ function sacarDinDin(valorSaque) {
         }
     }
 
+    // retorna o JSON gerado com as informações
     return (retorno);
 
 }
