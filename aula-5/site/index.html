@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 5</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+
+    <body onload="setTimeout('loadPage()', 200)">
+
+        <header class="fundo_sombra">
+            <titulo>Aula 5</titulo>
+            <titulo class="pull-right" id="loadPageCompleted">Carregando Pagina...</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra">
+                <center>
+                    <br>
+                    <br>
+                    <h3>Listar nomes digitados</h3>
+                    <button onclick="listNomesDigitados();">Executar Função.</button>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>On Click</h3>
+                    <button onclick="clickButton();">Executar Função.</button>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Alerta para quando digitar</h3>
+                    <input onkeyup="digitAlert(this.value);" placeholder="Digite algo para Executar a Função.">
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Passou o mouse em cima</h3>
+                    <span onmouseover="passouMouse();" class="impar"> Passe o mouse em cima para executar a função.</span>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Calculadora</h3>
+                    <input type="number" id="calV1" placeholder="valor"><input id="calS" placeholder="simbolo"><input type="number"  id="calV2" placeholder="valor"><button onclick="calculadora($('#calV1').val(), $('#calS').val(), $('#calV2').val());">Calcular</button>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Resultado:</h3>
+                    <br>
+                    <div id="retorno"></div>
+                    <br>
+                    <br>
+                </center>
+            </div>
+
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+
+</html>
