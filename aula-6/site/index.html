@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 6</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Aula 6</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra">
+                <center>
+
+                    <h3>Banco de dados de usuario (JSON)</h3>
+                    <br>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaInserir">
+
+                        </tbody>
+                    </table>
+
+
+                    <br>
+                    <hr>
+
+                    <h3>Color name in form</h3>
+                    <br>
+                    <form class="form-inline" action="javascript:actionFormColor();">
+                        <input class="form-control" type="text" id="form_cor" placeholder="Cor em HEX">
+                        <input class="form-control" type="text" id="form_nome" placeholder="Texto">
+                        <button class="btn btn-default" type="submit">OK</button>
+                    </form>
+                    <br>
+                    <br>
+                    <span id="form_result"></span>
+
+                    <br>
+                    <hr>
+
+                    <h3>Calculadora</h3>
+                    <br>
+                    <form action="javascript:calculadora($('#calV1').val(), $('#calS').val(), $('#calV2').val());">
+                        <div class="form-inline">
+                            <input class="form-control" type="number" id="calV1" placeholder="valor 1">
+                            <select class="form-control" id="calS">
+                                <option>+</option>
+                                <option>-</option>
+                                <option>*</option>
+                                <option>/</option>
+                                <option>%</option>
+                            </select>
+                            <input class="form-control" type="number" id="calV2" placeholder="valor 2">
+                        </div>
+                        <br>
+                        <div class="form-inline">
+                            <input class="form-control" type="number" id="resultMenor" placeholder="Se o resultador for menor que">
+                            <input class="form-control" type="text" id="resultMenorCor" placeholder="Ele vai ser da cor">
+                        </div>
+                        <br>
+                        <div class="form-inline">
+                            <input class="form-control" type="number" id="resultMaior" placeholder="Se o resultador for maior que">
+                            <input class="form-control" type="text" id="resultMaiorCor" placeholder="Ele vai ser da cor">
+                        </div>
+                        <br>
+                        <button class="btn btn-default" type="submit">Calcular</button>
+                    </form>
+                    <br>
+                    <br>
+                    <span id="cal_result"></span>
+
+                </center>
+            </div>
+
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <script>
+        var bdUsers = bancoUsuarios();
+        var html = "";
+
+        for (i in bdUsers) {
+            html += ' <tr id="user_' + bdUsers[i].id + '"> <th scope="row">' + bdUsers[i].id + '</th> <td>' + bdUsers[i].nome + '</td> <td>' + bdUsers[i].email + '</td> <td> <button class="btn btn-danger btn-circulo" onclick="actionButton(\'1\', \'' + bdUsers[i].id + '\', \'' + bdUsers[i].nome + '\');"> <i class="fa fa-times"></i> </button> <button class="btn btn-warning btn-circulo" onclick="actionButton(\'2\', \'' + bdUsers[i].id + '\', \'' + bdUsers[i].nome + '\');"> <i class="fa fa-pencil"></i> </button> <button class="btn btn-default btn-circulo" onclick="actionButton(\'3\', \'' + bdUsers[i].id + '\', \'' + bdUsers[i].nome + '\');"> <i class="fa fa-print"></i> </button> </td> </tr>';
+        }
+        $("#tabelaInserir").html(html);
+    </script>
+
+</html>

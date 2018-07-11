@@ -1,0 +1,20 @@
+.fundo_sombra{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+    background-color: #ffffff;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+.fundo_sombra>titulo{
+    font-size: 35px;
+    font-family: sans-serif;
+}
+.btn:focus{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+.btn:active:focus{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+.btn-circulo{
+    border-radius: 50px;
+    margin: 2px;
+}
