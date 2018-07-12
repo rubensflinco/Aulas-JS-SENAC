@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 7</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Aula 7</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra">
+                <center>
+
+                    <h3>Loop Alert</h3>
+                    <br>
+                    <button class="btn btn-default" onclick="intervalo(true, loopAlert, 1000);">Iniciar Loop alert</button> <button class="btn btn-default" onclick="intervalo(false, loopAlert, 100);">Parar Loop alert</button>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Loop Number Big</h3>
+                    <button class="btn btn-default" onclick="intervalo(true, loopNumberBig, 100);">Iniciar Loop number BIG</button> <button class="btn btn-default" onclick="intervalo(false, loopNumberBig, 100);">Parar Loop number BIG</button>
+                    <br>
+                    <span id="loopNumberBigRetorno"></span>
+
+                </center>
+            </div>
+
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+
+</html>
