@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 8</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>     
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Aula 8</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra">
+                <center>
+
+                    <h3>Div style by JS</h3>
+                    <br>
+                    <div id="divStyle" style="width: 50px;height: 50px;background: red;"></div>
+                    <br>
+                    <button class="btn btn-default" onclick="$('#divStyle').css('background', 'blue');">Fundo Azul.</button>
+                    <button class="btn btn-default" onclick="$('#divStyle').css('width', '100px');">Achatar.</button>
+                    <button class="btn btn-default" onclick="$('#divStyle').css('box-shadow', '0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 10px 0 rgba(0, 0, 0, 0.25)');">Colocar sombra.</button>
+                    <button class="btn btn-default" onclick="$('#divStyle').css('border', 'solid 10px green');">Colocar borda.</button>
+                    <br><br>
+                    <button class="btn btn-default" onclick="styleDivTudo('#divStyle');">Mudar Tudo.</button>
+                    <button class="btn btn-default" onclick="location.reload();">Restaurar Tudo.</button>
+                    <br>
+                    <hr>
+                    <h3>Events test Jquery</h3>
+                    <br>
+                    <span id="btn1">Mouse passou</span><br><br>
+                    <a>Mouse click</a><br><br>
+                    <input><br><br>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <br><br>
+                    <div id="resultado"></div>
+
+                </center>
+            </div>
+
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+
+</html>
