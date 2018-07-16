@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 9</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+    <script type="text/javascript" src="src/js/jquery.color-2.1.2.min.js"></script>
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Aula 9</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra">
+                <center>
+                    <h2>Efeitos e animações</h2>
+                    <br>
+
+                    <div class="quadrado"></div>
+                    <hr>
+
+                    <button class="btn btn-default" onclick="misterM('.quadrado', 'toggle', 0);">Toggle</button>
+                    <button class="btn btn-default" onclick="misterM('.quadrado', 'toggle', 500);">Toggle com tempo</button>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6" align="right">
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'hide', 0);">Hide</button>
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'show', 0);">Show</button>
+                            <br>
+                            <br>
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'hide', 500);">Hide com tempo</button>
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'show', 500);">Show com tempo</button>
+                        </div>
+                        <div class="col-md-6" align="left">
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'fadeOut', 0);">FadeOut</button>
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'fadeIn', 0);">FadeIn</button>
+                            <br>
+                            <br>
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'fadeOut', 500);">FadeOut com tempo</button>
+                            <button class="btn btn-default" onclick="misterM('.quadrado', 'fadeIn', 500);">FadeIn com tempo</button>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-default" onclick="misterM('.quadrado', 'slideUp', 500);">SlideUp com tempo</button>
+                    <button class="btn btn-default" onclick="misterM('.quadrado', 'slideDown', 500);">SlideDown com tempo</button>
+                    <button class="btn btn-default" onclick="misterM('.quadrado', 'slideToggle', 500);">SlideToggle com tempo</button>
+                    <br>
+                    <br>
+                    <button class="btn btn-default" onclick="$('.quadrado').animate({margin: '20px'}, 500);">Animate</button>
+                    <br>
+                    <br>
+
+                </center>
+            </div>
+
+            <div class="fundo_sombra">
+                <center>
+                    <h2>Campos add</h2>
+                    <br>
+                    <form class="form-inline" id="formUser">
+                            <input id="formUser_nome_1" placeholder="Nome 1" class="form-group form-control" type="text"> <input id="formUser_email_1" placeholder="E-mail 1" class="form-group form-control" type="text"><br><br>
+                    </form>
+                    <button class="btn btn-info btn-circulo" onclick="addCampo('#formUser');"><i class="fa fa-plus"></i></button> <button class="btn btn-info btn-circulo" onclick="printCampos('#camposRetorno');"><i class="fa fa-check"></i></button>
+                <hr>
+                <div id="camposRetorno"></div>
+                </center>
+            </div>
+
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/PrintElem.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <script type="text/javascript" src="src/js/misterM.js"></script>
+
+</html>
