@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rubens Flinco e Lucas Henrique">
+    <meta name="description" content="Pastas das aulas que estou tendo de JavaScript no SENAC.">
+
+    <title>Aula 10</title>
+    <link rel="shortcut icon" href="src/img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+
+    <body>
+
+        <header class="fundo_sombra">
+            <titulo>Aula 10</titulo>
+        </header>
+
+        <div class="container">
+
+            <div class="fundo_sombra">
+                <center>
+                    <h2>List</h2>
+                    <br>
+                </center>
+
+                <ul class="nav nav-pills">
+                    <li class="bt">
+                        <a href="#">Nome 1</a>
+                    </li>
+                    <li class="bt">
+                        <a href="#">Nome 2</a>
+                    </li>
+                    <li class="bt">
+                        <a href="#">Nome 3</a>
+                    </li>
+                    <li class="disabled">
+                        <a href="#">Nome 4</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="fundo_sombra">
+                <center>
+                    <h2>Img</h2>
+                    <br>
+
+
+                    <div id="imgprincipal" style="overflow: hidden;width: 150px;height: 150px;background-position: center;background-size: cover;background-image: url('src/img/i1.jpg')"></div>
+                    <br>
+                    <br>
+                    <div class="thumbs">
+                        <div class="th">
+                            <button class="para anterior btn btn-info btn-circulo"><i class="fa fa-arrow-left"></i></button>
+                            <img class="para imgs" data-img="0" src="src/img/i1.jpg" width="50" height="50">
+                            <img class="para imgs" data-img="1" src="src/img/i2.jpg" width="50" height="50">
+                            <img class="para imgs" data-img="2" src="src/img/i3.jpg" width="50" height="50">
+                            <button class="para proximo btn btn-info btn-circulo"><i class="fa fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                    <script>
+                        var variaveltempo = setInterval(iniciar, 2000);
+
+                        var fotos = new Array();
+                        fotos[0] = "src/img/i1.jpg";
+                        fotos[1] = "src/img/i2.jpg";
+                        fotos[2] = "src/img/i3.jpg";
+                        var contador = 0;
+
+                        function iniciar() {
+                            contador++;
+                            if (contador == fotos.length) {
+                                contador = 0;
+                            }
+                            $("#imgprincipal").css({'background-image': "url('" + fotos[contador] + "')"});
+                        }
+
+                        $(".imgs").mouseenter(function () {
+                            var teste = $(this).attr("data-img");
+                            $("#imgprincipal").css({'background-image': "url('" + fotos[teste] + "')"});
+                        });
+
+                        $(".para").mouseenter(function () {
+                            clearInterval(variaveltempo);
+                        })
+                        .mouseleave(function () {
+                            variaveltempo = setInterval(iniciar, 2000);
+                        });
+
+                        $(".anterior").click(function () {
+                            clearInterval(variaveltempo);
+                            contador--;
+                            if (contador <= -1) {
+                                contador = fotos.length;
+                            }else
+                            $("#imgprincipal").css({'background-image': "url('" + fotos[contador] + "')"});
+                        });
+                        $(".proximo").click(function () {
+                            clearInterval(variaveltempo);
+                            contador++;
+                            if (contador >= fotos.length) {
+                                contador = 0;
+                            }else
+                            $("#imgprincipal").css({'background-image': "url('" + fotos[contador] + "')"});
+                        });
+
+                    </script>
+                </center>
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="fundo_sombra animated s2 pulse">
+                <br>
+                <p align="right">SENAC - Penha</p>
+                <img align="right" src="src/img/icon.png">
+                <p align="left">
+                    Desenvolvedor:
+                    <br>Rubens Flinco
+                    <br>
+                </p>
+                <br>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="src/js/PrintElem.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <script type="text/javascript" src="src/js/misterM.js"></script>
+
+</html>
