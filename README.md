@@ -1,5 +1,6 @@
 # Aulas-JS-SENAC
-Pastas das aulas que estou tendo de JavaScript no SENAC.
+Pastas das aulas que tive de JavaScript no SENAC.
+Foi um curso muito legal já sabia um pouco de JavaScript porem esse curso me fez aprender algumas coisas que não sabia ainda, alem que o meu professor adorava dar desafios extras para min já que sabia um pouco mais de JavaScript adorei ter passado 10 dias nesse mini curso <3
 
 # Aula 01
 Nessa aula o desafio era fazer a musiquinha dos elefantes incomodam muita gente, porem adicionando linhas infinitas e adicionando a palavras incomodam.
